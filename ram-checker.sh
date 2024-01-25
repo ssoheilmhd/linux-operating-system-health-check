@@ -1,8 +1,8 @@
 #!/bin/bash
 #collect data from memory to find the percentage of usage
 
-TotalMemory=`free -h | grep Mem | awk '{print $2}' | cut -d "G" -f 1`
-UsedMemory=`free -h | grep Mem | awk '{print $3}' | cut -d "G" -f 1`
+TotalMemory=`free -m | grep Mem | awk '{print $2}'`
+UsedMemory=`free -m | grep Mem | awk '{print $3}'`
 PercentageDividingUsageByTotal=$(echo "scale=2; $UsedMemory * 100 / $TotalMemory" | bc)
 echo ${PercentageDividingUsageByTotal}%
 
