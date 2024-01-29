@@ -15,7 +15,7 @@ Help
 while true; do
     read -p "Enter the option to check health state (or enter help to find manual): " opt_input
     if [[ $opt_input == "1" ]]; then
-        source ram-checker.sh
+        bash ram-checker.sh
     elif [[ $opt_input == "2" ]]; then
         echo "use CPU func"
     elif [[ $opt_input == "3" ]]; then
