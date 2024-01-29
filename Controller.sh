@@ -1,4 +1,5 @@
 #!/bin/bash
+bash requirements.sh
 Help() {
 echo "
 1- Ram check
@@ -17,7 +18,7 @@ while true; do
     if [[ $opt_input == "1" ]]; then
         bash ram-checker.sh
     elif [[ $opt_input == "2" ]]; then
-        echo "use CPU func"
+        bash CPU-checker.sh
     elif [[ $opt_input == "3" ]]; then
         echo "use Disk func"
     elif [[ $opt_input == "4" ]]; then
