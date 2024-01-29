@@ -10,12 +10,12 @@ echo "
 7- Exit
 "
 }
-
+helpstr="help"
 Help
 while true; do
-    read -p "Enter the option to check health state (or 'exit' to quit): " opt_input
+    read -p "Enter the option to check health state (or enter help to find manual): " opt_input
     if [[ $opt_input == "1" ]]; then
-        echo "use Ram func"
+        source ram-checker.sh
     elif [[ $opt_input == "2" ]]; then
         echo "use CPU func"
     elif [[ $opt_input == "3" ]]; then
@@ -24,7 +24,8 @@ while true; do
         echo "use Network func"
     elif [[ $opt_input == "5" ]]; then
         echo "use all of Ram,CPU,Disk,Network func"
-    elif [[ $opt_input == "6" ]] || [[ $opt_input == "h" ]]; then
+    
+    elif [[ $opt_input == "6" ]] || [[ $opt_input == "h" ]] || [[ ${opt_input,,} = "${helpstr,,}"  ]] ; then
         Help
     elif [[ $opt_input == "7" ]] || [[ $opt_input == "exit" ]]; then
         exit 0
