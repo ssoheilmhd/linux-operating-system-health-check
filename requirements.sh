@@ -9,7 +9,7 @@ if [[ $iostatExists == 0 ]]; then
 echo "iostat is ready"
 else
 echo "####################################################################################################"
-echo "unfortunately iostat doesnt exist, If you tried with this script and failed to install it, we suggest you to install it manually"
+echo "unfortunately iostat doesnt exist"
 fi
 }
 
@@ -19,7 +19,7 @@ ls /etc/lsb-release >& /dev/null
 DistroIsDebianBase=`echo $?`
 ls /etc/redhat-release >& /dev/null
 DistroIsRedhatBase=`echo $?`
-
+echo "try to install sysstat..."
 if [[ $DistroIsDebianBase == 0 ]]; then
 sudo apt install sysstat
 elif [[ $DistroIsRedhatBase == 0 ]]; then
