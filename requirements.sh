@@ -1,5 +1,5 @@
 #!/bin/bash
-#these file will install your requirements which they are not present in your distribution
+#it will install your requirements which they are not present in your distribution
 iostatCheck() {
 echo "####################################################################################################"
 echo "Check if iostat is installed..."
