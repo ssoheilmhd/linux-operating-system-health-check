@@ -7,7 +7,7 @@ echo "offline CPUs:"
 cat /sys/devices/system/cpu/offline
 echo "####################################################################################################"
 echo "CPU state:"
-iostat -c
+iostat -c --human
 echo "####################################################################################################"
 echo "These are 10 big process in your CPU:"
 ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head

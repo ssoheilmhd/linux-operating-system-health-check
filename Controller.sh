@@ -20,7 +20,7 @@ while true; do
     elif [[ $opt_input == "2" ]]; then
         bash CPU-checker.sh
     elif [[ $opt_input == "3" ]]; then
-        echo "use Disk func"
+        bash Disk-checker.sh
     elif [[ $opt_input == "4" ]]; then
         echo "use Network func"
     elif [[ $opt_input == "5" ]]; then
