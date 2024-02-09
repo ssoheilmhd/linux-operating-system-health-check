@@ -17,12 +17,10 @@ while true; do
     if [[ $opt_input == "1" ]]; then
         bash RAM-checker.sh
     elif [[ $opt_input == "2" ]]; then
-        Checker "iostat"
         bash CPU-checker.sh
     elif [[ $opt_input == "3" ]]; then
         bash Disk-checker.sh
     elif [[ $opt_input == "4" ]]; then
-        Checker "bmon"
         bash Network-checker.sh
     elif [[ $opt_input == "5" ]] || [[ $opt_input == "h" ]] || [[ ${opt_input,,} = "${helpstr,,}"  ]] ; then
         Help

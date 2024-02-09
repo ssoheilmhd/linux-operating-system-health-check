@@ -12,6 +12,9 @@ else
 echo "####################################################################################################"
 echo "unfortunately $1 does not exist"
 fi
+if [[ "SecondTime" == `echo $2` ]]; then
+exit
+fi
 }
 
 toolsInstallation() {
@@ -41,7 +44,7 @@ else
 toolsInstallation "$1"
 fi
 
-toolsCheck "$1"
+toolsCheck "$1" "SecondTime"
 fi
 }
 

@@ -1,4 +1,6 @@
 #!/bin/bash
+source requirements.sh
+Checker "iostat"
 echo "####################################################################################################"
 echo "online CPUs:" 
 cat /sys/devices/system/cpu/online
