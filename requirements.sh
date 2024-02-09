@@ -11,10 +11,6 @@ echo "$1 is ready"
 else
 echo "####################################################################################################"
 echo "unfortunately $1 does not exist"
-if [[ $SecondCheck == "Yes"]]; then
-exit
-fi
-SecondCheck="Yes"
 fi
 }
 
