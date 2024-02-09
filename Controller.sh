@@ -6,9 +6,8 @@ echo "
 2- CPU check
 3- Disk Check
 4- Network Check
-5- All components
-6- Help
-7- Exit
+5- Help
+6- Exit
 "
 }
 helpstr="help"
@@ -22,13 +21,10 @@ while true; do
     elif [[ $opt_input == "3" ]]; then
         bash Disk-checker.sh
     elif [[ $opt_input == "4" ]]; then
-        echo "use Network func"
-    elif [[ $opt_input == "5" ]]; then
-        echo "use all of Ram,CPU,Disk,Network func"
-    
-    elif [[ $opt_input == "6" ]] || [[ $opt_input == "h" ]] || [[ ${opt_input,,} = "${helpstr,,}"  ]] ; then
+        bash Network-checker.sh
+    elif [[ $opt_input == "5" ]] || [[ $opt_input == "h" ]] || [[ ${opt_input,,} = "${helpstr,,}"  ]] ; then
         Help
-    elif [[ $opt_input == "7" ]] || [[ $opt_input == "exit" ]]; then
+    elif [[ $opt_input == "6" ]] || [[ $opt_input == "exit" ]]; then
         exit 0
     fi
 done
